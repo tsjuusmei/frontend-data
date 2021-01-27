@@ -163,19 +163,19 @@ async function cleanData() {
       })
 
       // Filters out empty tariffs
-      // .filter(y => {
-      //   Object.size = function (obj) { // Checks the size of an object https://stackoverflow.com/questions/5223/length-of-a-javascript-object
-      //     var size = 0, key;
-      //     for (key in obj) {
-      //       if (obj.hasOwnProperty(key)) size++;
-      //     }
-      //     return size;
-      //   };
-      //   if (Object.size(y.tariffs) === 0) {
-      //     return false
-      //   }
-      //   return y
-      // })
+      .filter(y => {
+        Object.size = function (obj) { // Checks the size of an object https://stackoverflow.com/questions/5223/length-of-a-javascript-object
+          var size = 0, key;
+          for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++;
+          }
+          return size;
+        };
+        if (Object.size(y.tariffs) === 0) {
+          return false
+        }
+        return y
+      })
 
       .filter(y => y.chargingpointcapacity < 20)
 
