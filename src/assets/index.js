@@ -167,8 +167,7 @@ async function cleanData() {
         Object.size = function (obj) { // Checks the size of an object https://stackoverflow.com/questions/5223/length-of-a-javascript-object
           var size = 0, key;
           for (key in obj) {
-            console.log(obj)
-            if (obj.hasOwnProperty(key)) size++;
+            if (Object.keys(obj).length > 0 && Object.keys(key).length > 0) size++;
           }
           return size;
         };
