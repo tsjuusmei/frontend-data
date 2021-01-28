@@ -52,7 +52,7 @@
             :cy="yScale(item.chargingpointcapacity)"
             :fill="pickColor(item)"
             :areaid="item.areaid"
-            @mouseover="createTooltip(), mouseOver()"
+            @mouseover="mouseOver()"
             @mouseout="mouseOut()"
           ></circle>
           <div></div>
