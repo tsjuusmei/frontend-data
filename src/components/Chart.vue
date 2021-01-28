@@ -174,54 +174,6 @@ export default {
   },
   mounted() {
     console.log("App loaded");
-    // this.fetchData();
-    // this.filterCities();
-  },
-  methods: {
-    updatechart(svg, data) {
-      svg
-        .selectAll("dot")
-        .data(
-          data.filter((d) => {
-            return d.city == "Amsterdam";
-          })
-        )
-        .enter()
-        .append("circle")
-        .style("fill", (d) => {
-          if (d.chargingpointcapacity > 10) {
-            return "green";
-          } else {
-            return "red";
-          }
-        })
-        .attr("r", 5)
-        .attr("cy", (d) => {
-          return y(d.chargingpointcapacity);
-        })
-        .attr("cx", (d) => {
-          return x(d.tariffs.tue);
-        })
-        .attr("areaid", (d) => {
-          return d.areaid;
-        });
-      console.log(data);
-    },
-    // async fetchData() {
-    //   let data = await cleanData();
-    //   this.loadData = data;
-    // },
-    // filterCities(data) {
-    //   let cities = [];
-    //   for (let i = 0; i < data.length; i++) {
-    //     cities.push(data[i].city);
-    //   }
-    //   cities = cities.filter((item, pos) => {
-    //     // This removes duplicate values from the array https://stackoverflow.com/questions/9229645/remove-duplicate-values-from-js-array
-    //     return cities.indexOf(item) == pos;
-    //   });
-    //   this.filteredCities = cities;
-    // },
   },
 };
 </script>
