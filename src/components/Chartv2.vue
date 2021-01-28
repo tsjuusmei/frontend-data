@@ -52,10 +52,10 @@
             :cy="yScale(item.chargingpointcapacity)"
             :fill="pickColor(item)"
             :areaid="item.areaid"
-            @mouseover="mouseOver()"
+            @mouseover="mouseOver(item)"
             @mouseout="mouseOut()"
           ></circle>
-          <div></div>
+          <div class="tooltip"></div>
         </g>
       </svg>
     </section>
@@ -101,7 +101,7 @@ select {
   font-family: "Segoe UI";
 }
 
-div.tooltip {
+span.tooltip {
   position: absolute;
   text-align: left;
   padding: 10px;
@@ -115,7 +115,7 @@ div.tooltip {
 </style>
 
 <script>
-import { scaleLinear, select, axisBottom, axisLeft } from "d3";
+import { scaleLinear, select, selectAll, axisBottom, axisLeft } from "d3";
 
 export default {
   name: "Chartv2",
@@ -191,7 +191,7 @@ export default {
     },
     mouseOver(d) {
       const div = select("div")
-        .append("div")
+        .append("span")
         .attr("class", "tooltip")
         .style("opacity", 0);
 
@@ -214,8 +214,8 @@ export default {
       return div;
     },
     mouseOut() {
-      // console.log("mouseout");
-      // div.transition().duration(500).style("opacity", 0);
+      const div = selectAll("span")
+      div.transition().duration(500).style("opacity", 0);
     },
   },
   watch: {
