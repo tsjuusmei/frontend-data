@@ -2,6 +2,8 @@
 
 *Frontend Data, a course of the Tech-track of Information Design, thema semester of the third year from the study CMD. In this course I will learn the essence of making graphs with D3.*
 
+![Website image](https://i.imgur.com/6MnzZuk.jpg)
+
 ### Deliverable
 
 An interesting research case and question based on parking data in cities in The Netherlands, including a digital data visualisation.
@@ -51,13 +53,13 @@ An interesting research case and question based on parking data in cities in The
 **1. Clone the repository**
 
 ```
-git clone https://github.com/tsjuusmei/functional-programming.git
+git clone https://github.com/tsjuusmei/frontend-data.git
 ```
 
 **2. Change directory to the folder**
 
 ```
-cd ./functional-programming
+cd ./frontend-data
 ```
 
 **3. Install NPM packages**
@@ -69,7 +71,7 @@ npm install
 **4. Run the project**
 
 ```
-node -r esm index.js
+node run serve
 ```
 
 ## Acknowledgements
