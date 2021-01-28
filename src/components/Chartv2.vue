@@ -125,7 +125,6 @@ export default {
       height: 600,
       width: 600,
       selectedCity: "All",
-      allCities: [],
       yMargin: 30,
     };
   },
