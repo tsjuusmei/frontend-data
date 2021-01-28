@@ -2,6 +2,8 @@
 
 *Frontend Data, a course of the Tech-track of Information Design, thema semester of the third year from the study CMD. In this course I will learn the essence of making graphs with D3.*
 
+![Website image](https://i.imgur.com/6MnzZuk.jpg)
+
 ### Deliverable
 
 An interesting research case and question based on parking data in cities in The Netherlands, including a digital data visualisation.
