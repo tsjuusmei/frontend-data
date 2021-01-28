@@ -152,9 +152,6 @@ export default {
     cities() {
       return new Set(this.data.map((d) => d.city).sort());
     },
-    leftAxis() {
-      return axisLeft(this.yScale);
-    },
   },
   methods: {
     renderAxes() {
