@@ -51,13 +51,13 @@ An interesting research case and question based on parking data in cities in The
 **1. Clone the repository**
 
 ```
-git clone https://github.com/tsjuusmei/functional-programming.git
+git clone https://github.com/tsjuusmei/frontend-data.git
 ```
 
 **2. Change directory to the folder**
 
 ```
-cd ./functional-programming
+cd ./frontend-data
 ```
 
 **3. Install NPM packages**
@@ -69,7 +69,7 @@ npm install
 **4. Run the project**
 
 ```
-node -r esm index.js
+node run serve
 ```
 
 ## Acknowledgements
